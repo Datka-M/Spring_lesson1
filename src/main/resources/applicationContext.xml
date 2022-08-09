@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+             http://www.springframework.org/schema/context
+             http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <bean id="window"
+          class="org.example.Window">
+    </bean>
+    <bean id="door"
+          class="org.example.Door">
+    </bean>
+
+    <bean id="person"
+          class="org.example.Person">
+        <constructor-arg ref="door"/>
+    </bean>
+
+
+    <bean id="actor"
+          class="org.example.Actor">
+        <property name="name" value="${actor.name}"/>
+        <property name="age" value="${age}"/>
+    </bean>
+
+
+    <bean id="directorBean"
+          class="org.example.Director">
+        <constructor-arg value="${director.name}"/>
+    </bean>
+
+
+    <bean id="movieBean"
+          class="org.example.Movie">
+        <property name="studio" ref="actor"/>
+    </bean>
+
+
+
+    <bean id="cheeseCakeBean"
+          class="org.example.CheeseCake">
+    </bean>
+
+    <bean id="honeyCakeBean"
+          class="org.example.HoneyCake">
+    </bean>
+
+    <bean id="brownieBean"
+          class="org.example.Brownie">
+    </bean>
+
+    <bean id="cakeBean"
+          class="org.example.Cake">
+        <constructor-arg ref="brownieBean"/>
+        <constructor-arg ref="cheeseCakeBean"/>
+        <constructor-arg ref="honeyCakeBean"/>
+    </bean>
+
+
+</beans>

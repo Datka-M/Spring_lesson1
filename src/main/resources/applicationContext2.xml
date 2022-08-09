@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+             http://www.springframework.org/schema/context
+             http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean id="autobiography"
+          class="org.example.book.Autobiography">
+    </bean>
+
+    <bean id="businessBook"
+          class="org.example.book.BusinessBook">
+    </bean>
+
+    <bean id="classicBook"
+          class="org.example.book.ClassicBook">
+    </bean>
+
+    <bean id="fantasyBook"
+          class="org.example.book.Fantasy">
+    </bean>
+
+    <bean id="fictionBook"
+          class="org.example.book.Fiction">
+    </bean>
+
+    <bean id="historyBook"
+          class="org.example.book.History">
+
+    </bean>
+
+    <bean id="horror"
+          class="org.example.book.Horror">
+
+    </bean>
+
+    <bean id="nonFictionBook"
+          class="org.example.book.NonFiction">
+
+    </bean>
+
+    <bean id="politicBook"
+          class="org.example.book.Politic">
+
+    </bean>
+
+    <bean id="romanBook"
+          class="org.example.book.RomanBook">
+
+    </bean>
+
+    <bean id="travelBook"
+          class="org.example.book.TravelBook">
+
+    </bean>
+
+    
+    <bean id="myLibrary"
+          class="org.example.book.Library">
+        <property name="autobiography" ref="autobiography"/>
+        <property name="businessBook" ref="businessBook"/>
+        <property name="classicBook" ref="classicBook"/>
+        <property name="fantasy" ref="fantasyBook"/>
+        <property name="fiction" ref="fictionBook"/>
+        <property name="history" ref="historyBook"/>
+        <property name="horror" ref="horror"/>
+        <property name="nonFiction" ref="nonFictionBook"/>
+        <property name="politic" ref="politicBook"/>
+        <property name="romanBook" ref="romanBook"/>
+        <property name="travelBook" ref="travelBook"/>
+    </bean>
+
+    
+
+<!--    <bean id="myLibrary"-->
+<!--          class="org.example.book.Library">-->
+<!--        <constructor-arg ref="travelBook"/>-->
+<!--        <constructor-arg ref="autobiography"/>-->
+<!--        <constructor-arg ref="businessBook"/>-->
+<!--        <constructor-arg ref="classicBook"/>-->
+<!--        <constructor-arg ref="fantasyBook"/>-->
+<!--        <constructor-arg ref="fictionBook"/>-->
+<!--        <constructor-arg ref="historyBook"/>-->
+<!--        <constructor-arg ref="horror"/>-->
+<!--        <constructor-arg ref="nonFictionBook"/>-->
+<!--        <constructor-arg ref="politicBook"/>-->
+<!--        <constructor-arg ref="romanBook"/>-->
+<!--    </bean>-->
+
+
+
+
+<!--    <bean id="myLibrary"-->
+<!--          class="org.example.book.Library">-->
+<!--        <constructor-arg ref="travelBook"/>-->
+<!--    </bean>-->
+
+</beans>
